@@ -22,10 +22,19 @@ def detect():
 def clock_return():
     global blue_tear_end, sun_idx
     return str(blue_tear_end), str(sun_idx)
-"""
-@app.route('/get_json', methods=['POST'])
-    #sun_angle
-"""
+
+@app.route('/post_json', methods=['POST'])
+def process_json():
+    global sun_angle
+    content_type = request.headers.get('Content-Type')
+    if (content_type == 'application/json'):
+        POST_content = request.json
+        print(POST_content['angle'])
+        sun_angle = POST_content['angle']
+        return make_response(jsonify(fleid= "ok"), 200)
+    else:
+        return 'Content-Type not supported!'
+
 @app.route("/video_feed", methods=['GET'])
 def video_feed():
     return Response(detect(), mimetype='multipart/x-mixed-replace; boundary=frame')
