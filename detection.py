@@ -167,9 +167,11 @@ def detect_main(sun_angle):
                 elif cnt == 0:
                     Case = "pray"
                     restrict = True
-            elif hand_sign_id == 4 and Case == "pray":
+            elif hand_sign_id == 5 and Case == "pray":
                 """ zoom in blue tear """
                 zoom = True
+            elif hand_sign_id == 6 and Case == "pray":
+                zoom = False
 
             # Finger gesture classification
             finger_gesture_id = 0
