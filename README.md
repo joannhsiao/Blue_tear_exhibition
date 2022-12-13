@@ -24,7 +24,8 @@ All the instructions here <font color=red>only need one hand</font>, and all the
 2. To turn on the light: `stone` hand gesture / open your palm
 3. To turn off the light: `five` hand gesture / close your palm
 4. To pray for the blue tears: `thumb up` hand gesture
-5. To zoom in on the part of the blue tears: `OK` hand gesture
+5. To zoom in on the part of the blue tears: `seven` hand gesture
+6. To zoom out the blue tears: `small heart` hand gesture
 	
 > :warning: 
 > After praying for the blue tears, you need to **wait for a few seconds** then the blue tears would show up.

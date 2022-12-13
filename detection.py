@@ -195,7 +195,7 @@ def detect_main(sun_angle):
             )
     else:
         point_history.append([0, 0])
-    cv2.imshow('Hand Gesture Recognition', debug_image)
+    #cv2.imshow('Hand Gesture Recognition', debug_image)
 
     """ display on the screen """
     if Case == "sunset":
