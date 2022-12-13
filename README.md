@@ -34,6 +34,7 @@ All the instructions here <font color=red>only need one hand</font>, and all the
 ## Data Collection
 - The size of the videos are large so we didn't upload them here, all the video are on our google drive. Download the materials from [here](https://drive.google.com/drive/u/0/folders/12hI5uB_-W8tm1z1VPcJoLmeoTQmb6mGd) before you run the program.
 - Put them under the directory `./data/`, then rename `藍眼淚呈現v3.mp4` as `blue_tears_v3.mp4`, `燈塔轉動.mp4` as `rotate.mp4` and `陽光下的淚Sun.mp4` as `sun.mp4`.
+- To collect all the hand gestures, we use the sample code from [^3] to capture the data by ourselves.
 
 
 ## How to use?
@@ -49,6 +50,6 @@ All the instructions here <font color=red>only need one hand</font>, and all the
 
 
 ## Reference
-1. Mediapipe
-2. Opencv
-3. Kazuhito Takahashi, 2020 "hand-gesture-recognition-mediapipe". [Source code](https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe)
+[^1]: Mediapipe [Source](https://github.com/google/mediapipe)
+[^2]: Opencv [Source](https://github.com/opencv/opencv)
+[^3]: Kazuhito Takahashi, 2020 "hand-gesture-recognition-mediapipe". [Source code](https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe)
