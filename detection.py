@@ -107,7 +107,7 @@ def get_frame(sun_angle):
     detect_main(sun_angle)
     ret, jpeg = cv2.imencode('.jpg', display)
 
-    angle = int(sun_idx/sun_video_slide) * 5
+    angle = int(sun_idx/sun_video_slide)
     return jpeg.tobytes(), end, angle
 
 def detect_main(sun_angle):
