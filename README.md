@@ -14,22 +14,21 @@
 	pip install -r requirements.txt
 	```
 
-	> **NOTICE!** : If you could not install `dlib` by `pip/pip3` successfully, try `conda install dlib` under your environment.
-
 4. Download all the data from google drive. Follow the [rules](#data-collection) as below.
 
 
 ## Instructions
-All the instructions here only need one hand!!
-1. To manipulate the sun: `scissors` hand gesture
-2. To turn on the light: open your palm
-3. To turn off the light: close your palm
+All the instructions here <font color=red>only need one hand</font>, and all the instructions are not in order.
+
+1. To show up the sun: `scissors` hand gesture
+2. To turn on the light: `stone` hand gesture / open your palm
+3. To turn off the light: `five` hand gesture / close your palm
 4. To pray for the blue tears: `thumb up` hand gesture
 5. To zoom in on the part of the blue tears: `OK` hand gesture
 	
-	> :warning: 
-	> After praying for the blue tears, you need to **wait for a few seconds** then the blue tears would show up.
-	> While blue tears or the sunset appeared, you **could not do anything** then. It will disappear after around 30 seconds. After then, you could manipulate everything again.
+> :warning: 
+> After praying for the blue tears, you need to **wait for a few seconds** then the blue tears would show up.
+> While blue tears or the sun appeared, you **could not do anything** then. It will disappear after around 30 seconds. After then, you could manipulate everything again.
 
 
 ## Data Collection
