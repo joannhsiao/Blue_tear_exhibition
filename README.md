@@ -20,18 +20,16 @@
 
 
 ## Instructions
-1. To manipulate the sun: turn the knob to the 180 degrees
+All the instructions here only need one hand!!
+1. To manipulate the sun: `scissors` hand gesture
 2. To turn on the light: open your palm
 3. To turn off the light: close your palm
-4. To pray for the blue tears: upper heart or down heart
-5. To zoom in on the part of the blue tears: step closer to the picture (less than 50 cm)
+4. To pray for the blue tears: `thumb up` hand gesture
+5. To zoom in on the part of the blue tears: `OK` hand gesture
 	
 	> :warning: 
 	> After praying for the blue tears, you need to **wait for a few seconds** then the blue tears would show up.
-	> While blue tears appeared, you **could not do anything** then. It will disappear after around 30 seconds. After then, you could manipulate everything again.
-
-6. To play again, you have to wait for the sun to reverse back to 0 degrees. (You could not do anything until the sun back to the starting point.)
-7. After then, you could back to step 1.
+	> While blue tears or the sunset appeared, you **could not do anything** then. It will disappear after around 30 seconds. After then, you could manipulate everything again.
 
 
 ## Data Collection
@@ -42,9 +40,8 @@
 ## How to use?
 - Scripts: 
 	- `app.py`: server
-	- `detect_main.py`: detect gesture and distance and display images/videos
+	- `detection.py`: detect gesture and distance and display images/videos
 	- `detect_gesture.py`: gesture recognition
-	- `distacne.py`: distance measurement
 - Usage: 
 	```bash
 	python app.py
@@ -55,4 +52,3 @@
 1. Mediapipe
 2. Opencv
 3. Kazuhito Takahashi, 2020 "hand-gesture-recognition-mediapipe". [Source code](https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe)
-4. Asadullah Dal, 2021 "Distance measurement using single1️⃣camera 📷". [Source code](https://github.com/Asadullah-Dal17/Distance_measurement_using_single_camera)
