@@ -3,9 +3,6 @@
 <head>
   <title>Blue tears</title>
   <link rel="stylesheet" href="../static/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <script src="../static/script.js"></script>
 </head>
 <body>
     <div class="back">
@@ -13,22 +10,6 @@
         <img class="tears" id="bg" src="{{ url_for('video_feed') }}">
         <img class="tears" id="bg">
         <img class="frame" src="../static/images/frame.png">
-        <div class="right_container">
-            <div id="reaction" class="reaction">
-                <img id="icon_anemoscope" src="../static/images/anemoscope.png" onclick="change_wind('東南風')">
-                <p id="wind_direction" class="icons_text"> 南風 </p>
-                <img id="icon_compass" src="../static/images/compass.png">
-            </div>
-            <p id="description">
-            </p>
-            <img id="gesture">
-            </img>
-            <div id="hint" class="hint">
-                <img id="hint_bulb" src="../static/images/hint2.png">
-                <p id="hint_text">
-                </p>               
-            </div>
-        </div>
     </div>
 </body>
 </html>
