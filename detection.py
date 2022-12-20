@@ -42,16 +42,16 @@ display = dark  # which to display
 Case = "dark"     # condition
 
 restrict = False    # restrict screen and cannot do hand recognition
-end = False     # is blue tear end or not?
-zoom = False    # zoom in/out
+end = False     # is sunrise end or not?
+zoom = False    # zoom in/out blue tear
 
 sun_video_slide = round(len_sun_video/(180/5))
-sun_idx = 0
+sun_idx = 0         # # index for sunrise video
 light_idx = 0       # index for lighthouse video
 tear_idx = 0        # index for blue tear video
 cnt = 20            # waiting for the blue tear appearing
 count_2min = 200    # the time blue tear disappeared
-crop_i, crop_j = 3402, 2702     # used for zoom in/out
+crop_i, crop_j = 3402, 2702     # crop size; used for zoom in/out blue tear
 
 # Argument parsing #######################################################
 args = get_args()
@@ -207,7 +207,7 @@ def detect_main(sun_angle):
         else:
             sun_idx = 0
             Case = "reverse"
-            restrict = False
+            #restrict = False
     elif Case == "dark":
         display = dark
     elif Case == "lighthouse":
