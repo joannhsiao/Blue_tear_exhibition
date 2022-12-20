@@ -7,21 +7,16 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-sun_angle = 0
+sun_angle = -1
 sun_idx = 0
 sun_end = False
 
 def detect():
     global sun_end, sun_idx, sun_angle
     while True:
-        frame, blue_tear_end, sun_idx = get_frame(sun_angle)
+        frame, sun_end, sun_idx = get_frame(sun_angle)
         yield (b'--frame\r\n'
         b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-
-@app.route('/get_end', methods=['GET'])
-def clock_return():
-    global sun_end, sun_idx
-    return str(sun_end), str(sun_idx)
 
 @app.route('/post_json', methods=['POST'])
 def process_json():
@@ -29,11 +24,18 @@ def process_json():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         POST_content = request.json
-        print(POST_content['angle'])
+        #print(POST_content['angle'])
         sun_angle = POST_content['angle']
         return make_response(jsonify(fleid= "ok"), 200)
     else:
         return 'Content-Type not supported!'
+
+@app.route('/get_end', methods=['GET'])
+def clock_return():
+    global sun_end, sun_idx
+    print(sun_end)
+    print(sun_idx)
+    return str(sun_end) + "," + str(sun_idx)
 
 @app.route("/video_feed", methods=['GET'])
 def video_feed():
