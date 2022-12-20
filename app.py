@@ -9,10 +9,10 @@ def home():
 
 sun_angle = 0
 sun_idx = 0
-blue_tear_end = False
+sun_end = False
 
 def detect():
-    global blue_tear_end, sun_idx, sun_angle
+    global sun_end, sun_idx, sun_angle
     while True:
         frame, blue_tear_end, sun_idx = get_frame(sun_angle)
         yield (b'--frame\r\n'
@@ -20,8 +20,8 @@ def detect():
 
 @app.route('/get_end', methods=['GET'])
 def clock_return():
-    global blue_tear_end, sun_idx
-    return str(blue_tear_end), str(sun_idx)
+    global sun_end, sun_idx
+    return str(sun_end), str(sun_idx)
 
 @app.route('/post_json', methods=['POST'])
 def process_json():
