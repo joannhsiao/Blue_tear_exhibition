@@ -257,7 +257,7 @@ def detect_main():
                     crop_j += 193
     elif Case == "reverse":
         if (sun_idx > 0):   # waiting for revsering back
-            sun_idx -= 8
+            sun_idx -= 6
             if sun_idx < 0:
                 sun_idx = 0
             end = True
