@@ -266,7 +266,5 @@ def detect_main():
             Case = "dark"
             end = False
             restrict = False
-        print(sun_idx)
-        #if sun_angle == 0:  
     else:
         pass
