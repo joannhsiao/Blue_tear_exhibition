@@ -12,9 +12,9 @@ sun_idx = 0
 sun_end = False
 
 def detect():
-    global sun_end, sun_idx, sun_angle
+    global sun_end, sun_idx
     while True:
-        frame, sun_end, sun_idx = get_frame(sun_angle)
+        frame, sun_end, sun_idx = get_frame()
         yield (b'--frame\r\n'
         b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 

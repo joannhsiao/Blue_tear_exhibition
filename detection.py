@@ -102,15 +102,15 @@ history_length = 16
 point_history = deque(maxlen=history_length)
 finger_gesture_history = deque(maxlen=history_length)
 
-def get_frame(sun_angle):
+def get_frame():
     global display, end, sun_idx
-    detect_main(sun_angle)
+    detect_main()
     ret, jpeg = cv2.imencode('.jpg', display)
 
     angle = int(sun_idx/sun_video_slide)
     return jpeg.tobytes(), end, angle
 
-def detect_main(sun_angle):
+def detect_main():
     global display
     global Case, restrict, end, zoom
     global sun_idx, light_idx, tear_idx, cnt, count_2min, crop_i, crop_j
@@ -205,7 +205,7 @@ def detect_main(sun_angle):
         if (sun_idx < len_sun_video-1):
             sun_idx += 1
         else:
-            sun_idx = 0
+            #sun_idx = 0
             Case = "reverse"
             #restrict = False
     elif Case == "dark":
@@ -256,12 +256,17 @@ def detect_main(sun_angle):
                     crop_i += 243
                     crop_j += 193
     elif Case == "reverse":
-        if sun_angle == 0:  # revserse to 0 degree, start again
+        if (sun_idx > 0):   # waiting for revsering back
+            sun_idx -= 8
+            if sun_idx < 0:
+                sun_idx = 0
+            end = True
+            restrict = True
+        else:   # revserse to 0 degree, start again
             Case = "dark"
             end = False
             restrict = False
-        else:       # waitin for revsering back
-            end = True
-            restrict = True
+        print(sun_idx)
+        #if sun_angle == 0:  
     else:
         pass
