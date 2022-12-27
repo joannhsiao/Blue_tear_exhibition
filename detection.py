@@ -49,8 +49,8 @@ sun_video_slide = round(len_sun_video/(180/5))
 sun_idx = 0         # # index for sunrise video
 light_idx = 0       # index for lighthouse video
 tear_idx = 0        # index for blue tear video
-cnt = 20            # waiting for the blue tear appearing
-count_2min = 200    # the time blue tear disappeared
+cnt = 10            # waiting for the blue tear appearing
+count_2min = 300    # the time blue tear disappeared
 crop_i, crop_j = 3402, 2702     # crop size; used for zoom in/out blue tear
 
 # Argument parsing #######################################################
@@ -221,8 +221,8 @@ def detect_main():
         restrict = True
         count_2min -= 1
         if count_2min == 0:     # time out
-            cnt = 20
-            count_2min = 200
+            cnt = 10
+            count_2min = 300
             Case = "dark"
             restrict = False
             zoom = False
