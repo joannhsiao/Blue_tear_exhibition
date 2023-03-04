@@ -50,6 +50,10 @@ All the instructions here <font color=red>only need one hand</font>, and all the
 	And then paste `127.0.0.1:6200` to the browser.
 
 
+## Demo Video
+https://www.youtube.com/watch?v=7jhAjcEawXE&ab_channel=%E7%BF%8E
+
+
 ## Reference
 [^1]: Mediapipe [Source](https://github.com/google/mediapipe)
 [^2]: Opencv [Source](https://github.com/opencv/opencv)
